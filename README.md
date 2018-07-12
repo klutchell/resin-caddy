@@ -21,9 +21,9 @@ see https://docs.resin.io/learn/getting-started
 
 |Service|Name|Value|
 |---|---|---|
-|`caddy`|`ACME_EMAIL`|`your@email.com`|
-|`caddy`|`CLOUDFLARE_EMAIL`|`your@email.com`|
-|`caddy`|`CLOUDFLARE_API_KEY`|[your api key](https://support.cloudflare.com/hc/en-us/articles/200167836-Where-do-I-find-my-Cloudflare-API-key-)|
+|`caddy`|`ACME_EMAIL`|`example@address.com`|
+|`caddy`|`CLOUDFLARE_EMAIL`|`example@address.com`|
+|`caddy`|`CLOUDFLARE_API_KEY`|`0bd1e80697be44bd8727050923faa84a`|
 |`volumerize`|`AWS_ACCESS_KEY_ID`|`QQWDQIWIDO1QO`|
 |`volumerize`|`AWS_SECRET_ACCESS_KEY`|`ewlfkwkejflkjwlkej3fjw381`|
 |`volumerize`|`PASSPHRASE`|`secretgpgpassword`|
