@@ -4,24 +4,33 @@ services:
 
   caddy:
     image: klutchell/caddy:armhf
-    volumes:
-      - 'caddy_data:/var/lib/caddy'
-      - 'caddy_certs:/root/.caddy'
     ports:
       - '80:80'
       - '443:443'
+    volumes:
+      - 'caddy_data:/var/lib/caddy'
+      - 'caddy_certs:/root/.caddy'
+
+  ssh:
+    image: klutchell/ssh:armhf
+    ports:
+      - '22:22'
+    volumes:
+      - 'ssh_data:/root/.ssh'
 
   volumerize:
     image: klutchell/volumerize:armhf
+    environment:
+      - 'VOLUMERIZE_SOURCE=/volumes'
     volumes:
       - 'volumerize_cache:/volumerize-cache'
       - 'caddy_data:/volumes/caddy_data:ro'
       - 'caddy_certs:/volumes/caddy_certs:ro'
-    environment:
-      - 'VOLUMERIZE_SOURCE=/volumes'
+      - 'ssh_data:/volumes/ssh_data:ro'
 
 volumes:
 
   caddy_data:
   caddy_certs:
+  ssh_data:
   volumerize_cache:
