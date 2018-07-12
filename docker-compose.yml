@@ -7,6 +7,7 @@ services:
     ports:
       - '80:80'
       - '443:443'
+      - '2015:2015'
     volumes:
       - 'caddy_root:/www'
       - 'caddy_certs:/root/.caddy'
