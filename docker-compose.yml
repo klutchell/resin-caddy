@@ -26,7 +26,7 @@ services:
     volumes:
       - 'volumerize_cache:/volumerize-cache'
       - 'caddy_root:/volumes/caddy_root:ro'
-      - 'caddy_certs:/volumes/caddy_certs:ro'
+      # - 'caddy_certs:/volumes/caddy_certs:ro'
       - 'ssh_data:/volumes/ssh_data:ro'
 
 volumes:
