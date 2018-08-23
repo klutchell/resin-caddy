@@ -3,7 +3,7 @@
 [resin.io](https://resin.io/) stack with the following services:
 * [caddy](https://caddyserver.com/)
 * [ssh](https://www.ssh.com/ssh/)
-* [duplicity](https://github.com/blacklabelops/volumerize)
+* [duplicati](https://www.duplicati.com/)
 
 ## Getting Started
 
@@ -24,15 +24,11 @@ see https://docs.resin.io/learn/getting-started
 |`caddy`|`ACME_EMAIL`|`example@address.com`|
 |`caddy`|`CLOUDFLARE_EMAIL`|`example@address.com`|
 |`caddy`|`CLOUDFLARE_API_KEY`|`0bd1e80697be44bd8727050923faa84a`|
-|`volumerize`|`AWS_ACCESS_KEY_ID`|`QQWDQIWIDO1QO`|
-|`volumerize`|`AWS_SECRET_ACCESS_KEY`|`ewlfkwkejflkjwlkej3fjw381`|
-|`volumerize`|`PASSPHRASE`|`secretgpgpassword`|
-|`volumerize`|`VOLUMERIZE_FULL_IF_OLDER_THAN`|`7D`|
-|`volumerize`|`VOLUMERIZE_TARGET`|`s3://s3.eu-central-1.amazonaws.com/duplicitytest`|
 
 ## Usage
 
-browse to `http://<device-ip>:80` to access the default webserver
+* browse to `http://<device-ip>:80` to access the default webserver
+* browse to `http://<device-ip>:8200` to access the duplicati admin interface
 
 ## Author
 
@@ -46,4 +42,4 @@ _tbd_
 
 * https://github.com/resin-io/resin-caddy
 * https://github.com/abiosoft/caddy-docker
-* https://github.com/blacklabelops/volumerize
+* https://github.com/linuxserver/docker-duplicati-armhf

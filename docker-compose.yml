@@ -19,19 +19,16 @@ services:
     volumes:
       - 'ssh_data:/root/.ssh'
 
-  volumerize:
-    image: klutchell/volumerize:armhf
-    environment:
-      - 'VOLUMERIZE_SOURCE=/volumes'
+  duplicati:
+    image: lsioarmhf/duplicati
+    ports:
+      - '8200:8200'
     volumes:
-      - 'volumerize_cache:/volumerize-cache'
-      - 'caddy_root:/volumes/caddy_root:ro'
-      # - 'caddy_certs:/volumes/caddy_certs:ro'
-      - 'ssh_data:/volumes/ssh_data:ro'
+      - 'caddy_root:/source/caddy_root:ro'
+      - 'ssh_data:/source/ssh_data:ro'
 
 volumes:
 
   caddy_root:
   caddy_certs:
   ssh_data:
-  volumerize_cache:
