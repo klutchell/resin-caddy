@@ -26,9 +26,11 @@ services:
     volumes:
       - 'caddy_root:/source/caddy_root:ro'
       - 'ssh_data:/source/ssh_data:ro'
+      - 'duplicati-data:/config'
 
 volumes:
 
   caddy_root:
   caddy_certs:
   ssh_data:
+  duplicati-data:
